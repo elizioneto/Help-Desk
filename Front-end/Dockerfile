@@ -1,6 +1,6 @@
 FROM node:14.21.3 AS builder
 
-WORKDIR /helpdesk
+WORKDIR /Front-end
 COPY package*.json ./
 
 RUN npm install
