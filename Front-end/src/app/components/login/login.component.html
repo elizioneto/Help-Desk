@@ -5,7 +5,8 @@
 
         <img src="assets/img/login-image.svg" alt="Help Desk">
 
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width" appearence="outline">
+            <mat-label>E-mail</mat-label>
             <input
              [formControl]="email" 
              required 
@@ -13,12 +14,29 @@
              name="email" 
              matInput
             placeholder="ex. exemplo@email.com">
+            <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
-        <mat-form-field class="full-width">
-            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput
-                placeholder="ex. 123">
+
+        <mat-form-field class="full-width" appearence="outline">
+            <mat-label>Senha</mat-label>
+            <input 
+            [formControl]="senha" 
+            required 
+            [(ngModel)]="creds.senha" 
+            name="senha" 
+            type="password" 
+            matInput
+            placeholder="ex. 123">
+            <mat-icon matSuffix>password</mat-icon>
         </mat-form-field>
-        <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-alevation-z4" mat-button
-            color="Login">Primary</button>
+
+        <button 
+        (click)="logar()" 
+        [disabled]="!validaCampos()" 
+        class="full-width mat-alevation-z4" 
+        mat-stroked-button 
+        color="Primary"
+        >Login</button>
+
     </form>
 </div>
