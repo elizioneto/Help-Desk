@@ -1,0 +1,24 @@
+<div class="container">
+    <form class="form mat-alevation-z8">
+
+        <h1>Help Desk</h1>
+
+        <img src="assets/img/login-image.svg" alt="Help Desk">
+
+        <mat-form-field class="full-width">
+            <input
+             [formControl]="email" 
+             required 
+             [(ngModel)]="creds.email" 
+             name="email" 
+             matInput
+            placeholder="ex. exemplo@email.com">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput
+                placeholder="ex. 123">
+        </mat-form-field>
+        <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-alevation-z4" mat-button
+            color="Login">Primary</button>
+    </form>
+</div>
