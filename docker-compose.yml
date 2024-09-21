@@ -8,7 +8,7 @@ services:
     ports:
       - "4200:4200"
     depends_on:
-      - back-end
+      - Back-end
     networks:
       - helpdesk-network
 
